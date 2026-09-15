@@ -50,48 +50,9 @@ async function superteamLive() {
   } catch (e) { return { error: e.message } }
 }
 
-const SERVICE = 'https://token-intel-x402.echolonius.deno.net'
-async function serviceHealth() {
-  try {
-    const r = await fetch(`${SERVICE}/healthz`, { signal: AbortSignal.timeout(10000) })
-    return r.ok ? 'live' : `down (HTTP ${r.status})`
-  } catch (e) { return `unreachable: ${e.message}` }
-}
-
-// Verify the actual PAID route, not just /healthz: an unpaid GET must return 402 with a payment
-// challenge. This is the money path — if it 404s/500s we are silently losing every sale, which a
-// liveness ping on the free route would never catch. The unpaid probe costs nothing (no settlement).
-async function paidRouteHealth() {
-  try {
-    const r = await fetch(`${SERVICE}/api/token-intel?mint=DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263`, { signal: AbortSignal.timeout(10000) })
-    if (r.status === 402 && r.headers.get('payment-required')) return 'gate-ok (402 challenge served)'
-    return `BROKEN (HTTP ${r.status}) — sales path down`
-  } catch (e) { return `unreachable: ${e.message}` }
-}
-
-// The /demo route runs the FULL intel pipeline (Jupiter + DexScreener fusion) for free — probing it
-// catches silent upstream API drift that the 402 gate probe can't see (the gate never runs intel).
-async function intelPipelineHealth() {
-  try {
-    const r = await fetch(`${SERVICE}/api/token-intel/demo`, { signal: AbortSignal.timeout(15000) })
-    if (!r.ok) return `demo BROKEN (HTTP ${r.status}) — intel pipeline down`
-    const d = await r.json()
-    if (d?.safety?.score == null) return 'demo responds but intel shape wrong — pipeline degraded'
-    // MCP surface (added 2026-07-05): stateless tools/list must return both tools.
-    let mcp = 'mcp-down'
-    try {
-      const m = await fetch(`${SERVICE}/mcp`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'tools/list' }), signal: AbortSignal.timeout(10000) })
-      const md = await m.json()
-      const names = (md?.result?.tools ?? []).map((x) => x.name)
-      mcp = names.includes('token_intel') && names.includes('token_intel_demo') ? 'mcp-ok' : `mcp DEGRADED (tools: ${names.join(',') || 'none'})`
-    } catch { /* keep mcp-down */ }
-    return `pipeline-ok (demo score ${d.safety.score}, ${1 + (d.dexScreener ? 1 : 0) + (d.rugCheck ? 1 : 0)} sources, ${mcp})`
-  } catch (e) { return `demo unreachable: ${e.message}` }
-}
-
 // Re-probe OpenTask each run: memory recorded its payment router as "unconfigured" (a dead rail). It
 // exposes a machine-readable status per method — when any flips to "available", the rail is LIVE and
-// we can act (and it lists x402-v2, which our existing service already speaks). This is a genuine net
+// we can act (and it lists x402-v2). This is a genuine net
 // beyond Superteam: a second earning source we catch the instant it revives, without any signup.
 async function openTaskRail() {
   try {
@@ -232,9 +193,6 @@ const usdc = await baseUsdc()
 const solUsdcBal = await solUsdc()
 const solNativeBal = await solNative()
 const superteam = await superteamLive()
-const service = await serviceHealth()
-const paidRoute = await paidRouteHealth()
-const intelPipeline = await intelPipelineHealth()
 const openTask = await openTaskRail()
 const hackathon = await hackathonStatus()
 const dealwork = await dealworkRail()
@@ -279,7 +237,7 @@ const fresh = openSlugs.filter((s) => !seen.includes(s))
 const freshDetail = (superteam.open || []).filter((o) => fresh.includes(o.slug))
 writeFileSync(new URL('./seen-listings.json', import.meta.url), JSON.stringify([...new Set([...seen, ...openSlugs])], null, 0))
 
-const snapshot = { ts: now, baseUsdc: usdc, solUsdc: solUsdcBal, solNative: solNativeBal, delta, solDelta, solNativeDelta, service, paidRoute, intelPipeline, openTask, hackathon, winnersFired, dealwork, toku, github, superteam, newListings: fresh }
+const snapshot = { ts: now, baseUsdc: usdc, solUsdc: solUsdcBal, solNative: solNativeBal, delta, solDelta, solNativeDelta, openTask, hackathon, winnersFired, dealwork, toku, github, superteam, newListings: fresh }
 appendFileSync(new URL('./history.jsonl', import.meta.url), JSON.stringify(snapshot) + '\n')
 
 const md = `# Earning agent status
@@ -291,11 +249,8 @@ _Last run: ${now} (UTC), ${process.env.GITHUB_ACTIONS ? "on GitHub Actions" : "l
 - **Solana USDC** \`${SOL_WALLET}\`: **${solUsdcBal}**${solDelta > 0 ? ` · 🎉 **+${solDelta.toFixed(6)} received since last run!**` : ''}
 - **Solana (native SOL — chovy's bounties pay here)**: **${solNativeBal}**${solNativeDelta > 0 ? ` · 🎉 **+${solNativeDelta.toFixed(9)} SOL received since last run!**` : ''}
 
-## 🛰️ Paid service (Solana Token Intelligence, x402)
-- ${SERVICE} — service **${service}** · paid-route **${paidRoute}** · intel **${intelPipeline}** · listed on 402index.io
-
 ## 🔀 Alt rails (widening the net beyond Superteam)
-- **OpenTask** router: **${openTask.state}**${openTask.live?.length ? ` · LIVE methods: ${openTask.live.join(', ')} — ACT NOW` : ' _(watching for revival; speaks x402-v2 our service already supports)_'}
+- **OpenTask** router: **${openTask.state}**${openTask.live?.length ? ` · LIVE methods: ${openTask.live.join(', ')} — ACT NOW` : ' _(watching for revival)_'}
 - **dealwork.ai** (agent echo-fable): ${dealwork.skipped ? `_${dealwork.skipped}_` : dealwork.error ? `_err: ${dealwork.error}_` : `heartbeat **${dealwork.heartbeat}** · bids: ${dealwork.bids?.map((b) => `${b.status} $${b.amount}`).join(', ') || 'none'} · contracts: ${dealwork.contracts?.length ? dealwork.contracts.map((c) => `${c.state} $${c.amount ?? '?'}`).join(', ') : 'none'}${dealwork.actionable ? ' · ⚡ **ESCROW LOCKED — WORK IS OWED, open a session**' : ''}`}
 - **toku.agency** (agent echo-fable, real-USD wallet): ${toku.skipped ? `_${toku.skipped}_` : toku.error ? `_err: ${toku.error}_` : `balance **$${((toku.balanceCents || 0) / 100).toFixed(2)}** · ${toku.txs} transactions · ${toku.unread || 0} unread${toku.unread ? ' · 📬 **UNREAD NOTIFICATION — possible hire/DM, open a session**' : ''}${tokuDelta > 0 ? ` · 🎉 **+$${(tokuDelta / 100).toFixed(2)} earned since last run!**` : ''}`}
 
@@ -352,5 +307,4 @@ if (openTask.live?.length) console.log(`::notice title=OPENTASK RAIL LIVE::metho
 if (newContract) console.log('::notice title=DEALWORK BID ACCEPTED::escrow locked — work is owed, open a session to deliver')
 if (tokuDelta > 0) console.log(`::notice title=TOKU PAYMENT::+$${(tokuDelta / 100).toFixed(2)} USD landed in the toku.agency wallet — total $${((toku.balanceCents || 0) / 100).toFixed(2)}`)
 if (toku.unread) console.log(`::notice title=TOKU UNREAD::${toku.unread} unread toku notification(s) — possible hire or DM`)
-if (String(paidRoute).startsWith('BROKEN')) console.log(`::warning title=SALES PATH DOWN::${paidRoute}`)
 if (freshDetail.length) console.log('::notice title=NEW LISTINGS::' + freshDetail.map((o) => `${o.slug} (${o.access}, ${o.reward} ${o.token})`).join(' | '))
