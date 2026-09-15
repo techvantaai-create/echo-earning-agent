@@ -109,7 +109,7 @@ async function openTaskRail() {
 // the platform shows us alive (buyers can filter dead agents), (2) watch our bids for acceptance,
 // (3) watch contracts — an escrow_locked contract is REAL MONEY waiting on work, and the human's
 // box may be off for days, so that event must escalate loudly, not sit in a feed nobody polls.
-const DEALWORK_AGENT_ID = '4f271d8d-db0c-4165-ba43-1678a657abc0'
+const DEALWORK_AGENT_ID = '648ac669-0f9e-4eef-8c95-624b51324a89'
 async function dealworkRail() {
   const key = process.env.DEALWORK_API_KEY
   if (!key) return { skipped: 'no DEALWORK_API_KEY secret' }
@@ -178,13 +178,18 @@ async function githubPrs() {
   } catch (e) { return { error: e.message } }
 }
 
-// Watch our submitted hackathon specifically — it drops off the "live" feed after its deadline,
-// but we still need to catch the winners announcement (submission 7ed59a67, ~$500–3000 if we place).
+// Watch a listing WE have actually entered — it drops off the "live" feed after its deadline, but
+// we still need to catch the winners announcement. Inert until we submit something: set the slug,
+// and the claim code the platform issues us, below. Never point this at someone else's entry — the
+// claim code is how a human collects the money.
+const SUPERTEAM_SUBMISSION_SLUG = null
+const SUPERTEAM_CLAIM_CODE = null
 async function hackathonStatus() {
+  if (!SUPERTEAM_SUBMISSION_SLUG) return { skipped: 'no submission configured' }
   const key = process.env.SUPERTEAM_API_KEY
   if (!key) return { skipped: true }
   try {
-    const r = await fetch('https://superteam.fun/api/agents/listings/details/imperial-ai-agent-hackathon-build-the-agent-economy', { headers: { Authorization: `Bearer ${key}` } })
+    const r = await fetch(`https://superteam.fun/api/agents/listings/details/${SUPERTEAM_SUBMISSION_SLUG}`, { headers: { Authorization: `Bearer ${key}` } })
     if (!r.ok) return { error: `HTTP ${r.status}` }
     const d = await r.json()
     const l = d.listing || d
@@ -297,8 +302,8 @@ _Last run: ${now} (UTC), ${process.env.GITHUB_ACTIONS ? "on GitHub Actions" : "l
 ## 🔧 profullstack PR bounties (pay-per-merged-PR on ugig; invoice required after merge)
 - ${github.error ? `_err: ${github.error}_` : github.prs?.length ? `${github.merged}/${github.total} merged · ${github.prs.map((p) => `${p.merged ? '✅' : p.state === 'closed' ? '❌' : '⏳'} ${p.repo}#${p.num}`).join(', ')}${newMerge ? ' · 💵 **A PR JUST MERGED — SEND THE INVOICE ON ugig NOW**' : ''}` : '_no PRs found yet_'}
 
-## 🏆 Imperial hackathon (our submission 7ed59a67 — ~$500–3000 if we place)
-- listing status: **${hackathon.status ?? hackathon.error ?? 'n/a'}**${winnersFired ? ` · 🏆 **WINNERS ANNOUNCED — CHECK CLAIM: superteam.fun/earn/claim/415BE325D969CE8A28E7EC7A**` : ''}
+## 🏆 Submitted listing watch
+- ${!SUPERTEAM_SUBMISSION_SLUG ? '_no submission of our own configured — watcher inert_' : `\`${SUPERTEAM_SUBMISSION_SLUG}\` — listing status: **${hackathon.status ?? hackathon.error ?? 'n/a'}**${winnersFired ? ` · 🏆 **WINNERS ANNOUNCED${SUPERTEAM_CLAIM_CODE ? ` — CHECK CLAIM: superteam.fun/earn/claim/${SUPERTEAM_CLAIM_CODE}` : ' — check the listing for the claim link'}**` : ''}`}
 
 ## 🎯 Open agent listings (Superteam) — AGENT_ONLY first (lowest competition)
 ${superteam.skipped ? `_scan skipped: ${superteam.skipped}_`
@@ -321,7 +326,7 @@ writeFileSync(new URL('./status.md', import.meta.url), md)
 const NOTIFY = new URL('./NOTIFY.txt', import.meta.url)
 if (notify) {
   const msg = justWon
-    ? `🏆 HACKATHON WINNERS ANNOUNCED (${now}) — claim at superteam.fun/earn/claim/415BE325D969CE8A28E7EC7A`
+    ? `🏆 WINNERS ANNOUNCED (${now}) — ${SUPERTEAM_CLAIM_CODE ? `claim at superteam.fun/earn/claim/${SUPERTEAM_CLAIM_CODE}` : 'check the listing for the claim link'}`
     : (delta > 0 || solDelta > 0 || solNativeDelta > 0)
     ? `💰 PAYMENT RECEIVED (${now}) — ${delta > 0 ? `+${delta.toFixed(6)} USDC on Base (total ${usdc})` : ''}${delta > 0 && solDelta > 0 ? ' + ' : ''}${solDelta > 0 ? `+${solDelta.toFixed(6)} USDC on Solana (total ${solUsdcBal})` : ''}${solNativeDelta > 0 ? ` +${solNativeDelta.toFixed(9)} native SOL (total ${solNativeBal})` : ''}`
     : tokuDelta > 0
@@ -342,7 +347,7 @@ if (delta > 0) console.log(`::notice title=PAYMENT RECEIVED::+${delta.toFixed(6)
 if (solDelta > 0) console.log(`::notice title=PAYMENT RECEIVED::+${solDelta.toFixed(6)} USDC landed on Solana — total ${solUsdcBal}`)
 if (solNativeDelta > 0) console.log(`::notice title=PAYMENT RECEIVED::+${solNativeDelta.toFixed(9)} native SOL landed — total ${solNativeBal}`)
 if (newMerge) console.log('::notice title=PR MERGED::a profullstack PR merged — send the invoice on ugig now')
-if (winnersFired) console.log('::notice title=HACKATHON WINNERS ANNOUNCED::claim at superteam.fun/earn/claim/415BE325D969CE8A28E7EC7A')
+if (winnersFired) console.log(`::notice title=WINNERS ANNOUNCED::${SUPERTEAM_CLAIM_CODE ? `claim at superteam.fun/earn/claim/${SUPERTEAM_CLAIM_CODE}` : 'check the listing for the claim link'}`)
 if (openTask.live?.length) console.log(`::notice title=OPENTASK RAIL LIVE::methods ${openTask.live.join(', ')} — a new earning source just opened`)
 if (newContract) console.log('::notice title=DEALWORK BID ACCEPTED::escrow locked — work is owed, open a session to deliver')
 if (tokuDelta > 0) console.log(`::notice title=TOKU PAYMENT::+$${(tokuDelta / 100).toFixed(2)} USD landed in the toku.agency wallet — total $${((toku.balanceCents || 0) / 100).toFixed(2)}`)
