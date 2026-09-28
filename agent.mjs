@@ -9,6 +9,9 @@
  * No private keys ever live here — this process only READS. Earning/spending stays offline.
  */
 import { writeFileSync, appendFileSync, readFileSync, unlinkSync } from 'node:fs'
+// Discovery-safe surface only. `transition` is deliberately NOT imported — this process runs unattended
+// every 30 minutes, so it must be structurally incapable of accepting or submitting work.
+import { intake, normalize, summary as orderSummary, competitionBand } from './orders.mjs'
 
 const EVM_WALLET = '0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb' // Base USDC receive-only
 const BASE_USDC = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913'
@@ -139,6 +142,77 @@ async function githubPrs() {
   } catch (e) { return { error: e.message } }
 }
 
+// Algora early-bounty sensor (2026-09-15). Funding is rarely what kills an OSS bounty — the merge path
+// is, and it dies once a bounty ages long enough to draw 20+ agent-written PRs onto one issue (observed:
+// 31 PRs, 0 merged, maintainer disengaged). The only edge left is TIME, so watch for bounties in their
+// first days while the review queue is still empty. DETECTION ONLY: three GET calls, no claim path, and
+// anything it cannot establish cheaply is reported NOT_CHECKED rather than guessed.
+const ALGORA_FRESH_DAYS = 14     // a bounty older than this has usually already drawn a PR swarm
+const ALGORA_ENRICH_MAX = 8      // per-issue comment reads per run
+const ALGORA_REPO_CHECK_MAX = 3  // per-repo merge-activity reads per run
+async function algoraFresh() {
+  const H = { Accept: 'application/vnd.github+json', 'User-Agent': 'echo-earning-agent' }
+  // reuses the workflow's auto-injected GITHUB_TOKEN when present; never required, never stored
+  if (process.env.GITHUB_TOKEN) H.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`
+  const get = async (u) => {
+    const r = await fetch(u, { headers: H, signal: AbortSignal.timeout(15000) })
+    if (!r.ok) throw new Error(`HTTP ${r.status}`)
+    return r.json()
+  }
+  try {
+    // A bounty is a COMMENT, usually posted onto an issue that is already months or years old, so
+    // filtering by issue `created:` misses nearly every real bounty (measured: 0 hits over 120 days
+    // while live bounties existed). Search cannot filter by comment date, so sort by recent activity
+    // and derive true bounty age from the bot comment timestamp during enrichment below.
+    const q = encodeURIComponent('is:issue is:open commenter:algora-pbc')
+    const j = await get(`https://api.github.com/search/issues?q=${q}&sort=updated&order=desc&per_page=30`)
+    const items = j.items || []
+    const cands = []
+    for (const it of items.slice(0, ALGORA_ENRICH_MAX)) {
+      const repo = (it.repository_url || '').replace(/.*\/repos\//, '')
+      const c = {
+        repo, num: it.number, url: it.html_url, title: (it.title || '').slice(0, 60),
+        issueAgeDays: Math.floor((Date.now() - Date.parse(it.created_at)) / 86400000), // NOT bounty age
+        bountyUsd: null, cancelled: false, attempts: null, competition: 'UNKNOWN',
+        maintainer: 'UNKNOWN', lastExternalMerge: null, externalMerges30d: null,
+        // this rail never establishes these — a human/session step does, or they stay unknown
+        payout: 'NOT_CHECKED', zeroCost: 'NOT_CHECKED', ai: 'NOT_CHECKED',
+      }
+      try {
+        const cm = await get(`https://api.github.com/repos/${repo}/issues/${it.number}/comments?per_page=100`)
+        const bot = cm.filter((x) => x.user && x.user.login === 'algora-pbc').pop()
+        // a struck-through bounty comment (~~...~~) means the sponsor pulled it — not a live reward
+        c.cancelled = Boolean(bot && /~~/.test(bot.body || ''))
+        // the real freshness signal: when the BOUNTY was posted, not when the issue was opened
+        c.bountyPostedAt = bot ? bot.created_at : null
+        c.bountyAgeDays = bot ? Math.floor((Date.now() - Date.parse(bot.created_at)) / 86400000) : null
+        c.fresh = c.bountyAgeDays != null && c.bountyAgeDays <= ALGORA_FRESH_DAYS
+        const m = (bot && (bot.body || '').match(/\$\s?([\d,]+(?:\.\d{1,2})?)/)) || null
+        c.bountyUsd = m ? Number(m[1].replace(/,/g, '')) : null
+        c.attempts = cm.filter((x) => /\/attempt|\/claim/i.test(x.body || '')).length
+        c.competition = competitionBand(c.attempts) // a BAND, never a filter
+      } catch (e) { c.enrichError = e.message }
+      cands.push(c)
+    }
+    // Ordinary-PR activity and bounty-PR activity are SEPARATE signals (a repo can merge externals daily
+    // and still leave every bounty PR unreviewed), so this measures the repo pulse only — not the odds.
+    cands.sort((a, b) => (a.bountyAgeDays ?? 1e9) - (b.bountyAgeDays ?? 1e9))
+    for (const c of cands.slice(0, ALGORA_REPO_CHECK_MAX)) {
+      try {
+        const owner = c.repo.split('/')[0]
+        const q = encodeURIComponent(`repo:${c.repo} is:pr is:merged`)
+        const j = await get(`https://api.github.com/search/issues?q=${q}&sort=updated&order=desc&per_page=30`)
+        const ext = (j.items || []).filter((x) => x.user && x.user.login !== owner && x.closed_at)
+        c.lastExternalMerge = ext.length ? ext[0].closed_at.slice(0, 10) : null
+        const cut = Date.now() - 30 * 86400000
+        c.externalMerges30d = ext.filter((x) => Date.parse(x.closed_at) >= cut).length
+        c.maintainer = c.externalMerges30d >= 3 ? 'ACTIVE' : c.externalMerges30d >= 1 ? 'MODERATELY_ACTIVE' : ext.length ? 'STALE' : 'UNKNOWN'
+      } catch (e) { c.mergeError = e.message }
+    }
+    return { freshDays: ALGORA_FRESH_DAYS, scanned: items.length, enriched: cands.length, fresh: cands.filter((c) => c.fresh).length, candidates: cands }
+  } catch (e) { return { error: e.message } }
+}
+
 // Watch a listing WE have actually entered — it drops off the "live" feed after its deadline, but
 // we still need to catch the winners announcement. Inert until we submit something: set the slug,
 // and the claim code the platform issues us, below. Never point this at someone else's entry — the
@@ -198,6 +272,21 @@ const hackathon = await hackathonStatus()
 const dealwork = await dealworkRail()
 const toku = await tokuRail()
 const github = await githubPrs()
+const algora = await algoraFresh()
+
+// DISCOVERY ONLY: records what the sensor saw as DISCOVERED work orders. Creating a row is not
+// accepting a job — advancing past DISCOVERED happens exclusively through the human CLI in orders.mjs.
+// Cancelled bounties are never taken in. Competition is carried as a risk flag, never as a filter.
+// DISCOVERY ONLY, one schema for every rail. Creating a row is not accepting a job — advancing past
+// DISCOVERED happens exclusively through the human CLI in orders.mjs. Cancelled bounties are never
+// taken in. Competition rides along as a risk flag and a score penalty, never as a filter.
+// Rails that only report status (dealwork bids/contracts, toku wallet, opentask router, our own PRs)
+// emit no opportunities by design: they monitor money and work we already hold.
+const discovered = intake([
+  ...(algora.candidates || []).filter((c) => !c.cancelled).map((c) => normalize('algora', c)),
+  ...(superteam.open || []).map((l) => normalize('superteam', l)),
+].filter(Boolean))
+const orders = orderSummary()
 
 // Balance delta vs the previous run — a payment landing is THE profit event, so flag it loudly
 // instead of leaving it as a quietly-changed number nobody reads. Also carry forward the previous
@@ -237,7 +326,13 @@ const fresh = openSlugs.filter((s) => !seen.includes(s))
 const freshDetail = (superteam.open || []).filter((o) => fresh.includes(o.slug))
 writeFileSync(new URL('./seen-listings.json', import.meta.url), JSON.stringify([...new Set([...seen, ...openSlugs])], null, 0))
 
-const snapshot = { ts: now, baseUsdc: usdc, solUsdc: solUsdcBal, solNative: solNativeBal, delta, solDelta, solNativeDelta, openTask, hackathon, winnersFired, dealwork, toku, github, superteam, newListings: fresh }
+let seenAlgora = []
+try { seenAlgora = JSON.parse(readFileSync(new URL('./seen-algora.json', import.meta.url), 'utf8')) } catch {}
+const algoraKeys = (algora.candidates || []).map((c) => `${c.repo}#${c.num}`)
+const algoraNew = (algora.candidates || []).filter((c) => !seenAlgora.includes(`${c.repo}#${c.num}`))
+writeFileSync(new URL('./seen-algora.json', import.meta.url), JSON.stringify([...new Set([...seenAlgora, ...algoraKeys])], null, 0))
+
+const snapshot = { ts: now, baseUsdc: usdc, solUsdc: solUsdcBal, solNative: solNativeBal, delta, solDelta, solNativeDelta, openTask, hackathon, winnersFired, dealwork, toku, github, superteam, algora, orders, discovered: discovered.map((d) => d.work_order_id), newListings: fresh }
 appendFileSync(new URL('./history.jsonl', import.meta.url), JSON.stringify(snapshot) + '\n')
 
 const md = `# Earning agent status
@@ -259,6 +354,12 @@ _Last run: ${now} (UTC), ${process.env.GITHUB_ACTIONS ? "on GitHub Actions" : "l
 
 ## 🏆 Submitted listing watch
 - ${!SUPERTEAM_SUBMISSION_SLUG ? '_no submission of our own configured — watcher inert_' : `\`${SUPERTEAM_SUBMISSION_SLUG}\` — listing status: **${hackathon.status ?? hackathon.error ?? 'n/a'}**${winnersFired ? ` · 🏆 **WINNERS ANNOUNCED${SUPERTEAM_CLAIM_CODE ? ` — CHECK CLAIM: superteam.fun/earn/claim/${SUPERTEAM_CLAIM_CODE}` : ' — check the listing for the claim link'}**` : ''}`}
+
+## 🧾 Work order queue (advance only via \`node orders.mjs\` \u2014 ACCEPT/SUBMIT need human GO)
+- ${orders.total} tracked \u00b7 ${orders.active} active \u00b7 ${Object.entries(orders.byState).map(([k, v]) => `${k}: ${v}`).join(' \u00b7 ') || '_none_'}${discovered.length ? ` \u00b7 \ud83c\udd95 **${discovered.length} newly discovered**` : ''}
+
+## 🆕 Algora bounty radar (fresh = bounty posted \u2264${algora.freshDays}d ago \u2014 DETECTION ONLY, nothing below is verified)
+${algora.error ? `_err: ${algora.error}_` : algora.candidates && algora.candidates.length ? algora.candidates.map((c) => `- [${c.repo}#${c.num}](${c.url}) \u2014 **${c.bountyUsd != null ? '$' + c.bountyUsd : 'amount ?'}**${c.cancelled ? ' \u26a0\ufe0f **CANCELLED**' : ''} \u00b7 bounty ${c.bountyAgeDays != null ? c.bountyAgeDays + 'd' : '?'} old${c.fresh ? ' \u2728 **FRESH**' : ''} \u00b7 competition **${c.competition}**${c.attempts != null ? ` (${c.attempts} attempts)` : ''} \u00b7 maintainer **${c.maintainer}**${c.lastExternalMerge ? ` (last ext merge ${c.lastExternalMerge})` : ''} \u00b7 payout _${c.payout}_ \u00b7 $0 _${c.zeroCost}_`).join('\n') : '_none in window_'}
 
 ## 🎯 Open agent listings (Superteam) — AGENT_ONLY first (lowest competition)
 ${superteam.skipped ? `_scan skipped: ${superteam.skipped}_`
@@ -307,4 +408,6 @@ if (openTask.live?.length) console.log(`::notice title=OPENTASK RAIL LIVE::metho
 if (newContract) console.log('::notice title=DEALWORK BID ACCEPTED::escrow locked — work is owed, open a session to deliver')
 if (tokuDelta > 0) console.log(`::notice title=TOKU PAYMENT::+$${(tokuDelta / 100).toFixed(2)} USD landed in the toku.agency wallet — total $${((toku.balanceCents || 0) / 100).toFixed(2)}`)
 if (toku.unread) console.log(`::notice title=TOKU UNREAD::${toku.unread} unread toku notification(s) — possible hire or DM`)
+const algoraAlert = algoraNew.filter((c) => c.fresh && !c.cancelled)
+if (algoraAlert.length) console.log('::notice title=NEW ALGORA BOUNTY::' + algoraAlert.map((c) => `${c.repo}#${c.num} ${c.bountyUsd != null ? '$' + c.bountyUsd : '$?'} (competition ${c.competition}, maintainer ${c.maintainer}) \u2014 VERIFY payout + $0 before any work`).join(' | '))
 if (freshDetail.length) console.log('::notice title=NEW LISTINGS::' + freshDetail.map((o) => `${o.slug} (${o.access}, ${o.reward} ${o.token})`).join(' | '))
