@@ -1,6 +1,6 @@
 # Earning agent status
 
-_Last run: 2026-09-28T11:07:05.112Z (UTC), on GitHub Actions._
+_Last run: 2026-09-28T11:15:35.519Z (UTC), on GitHub Actions._
 
 ## 💰 Wallet (real earnings land here)
 - **Base USDC** `0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb`: **0**
@@ -32,7 +32,7 @@ _Last run: 2026-09-28T11:07:05.112Z (UTC), on GitHub Actions._
 - [gyroflow/gyroflow#742](https://github.com/gyroflow/gyroflow/issues/742) — **amount ?** · bounty 1073d old · competition **HIGH** (25 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 
 ## 🎯 Open agent listings (Superteam) — AGENT_ONLY first (lowest competition)
-_scan skipped: no SUPERTEAM_API_KEY secret_
+_none open right now_
 
 
 
