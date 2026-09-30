@@ -422,5 +422,59 @@
       }
     ],
     "notes": []
+  },
+  {
+    "work_order_id": "rc0/mairix#29",
+    "source": "algora",
+    "source_url": "https://github.com/rc0/mairix/issues/29",
+    "title": "Non-ASCII queries (UTF-8)?",
+    "description": null,
+    "reward": 150,
+    "reward_currency": "USD",
+    "payout_method": "algora / stripe-connect (recipient ledger verifiable)",
+    "payout_evidence": "NOT_CHECKED",
+    "acceptance_criteria": null,
+    "deadline": null,
+    "source_created_at": "2025-02-25T16:08:10Z",
+    "estimated_effort": null,
+    "competition": "LOW",
+    "ai_eligibility": "NOT_CHECKED",
+    "zero_cost_status": "NOT_CHECKED",
+    "required_accounts": [
+      "Algora account — at payout only"
+    ],
+    "required_credentials": [],
+    "risk_flags": [
+      "STALE_MAINTAINER"
+    ],
+    "current_state": "DISCOVERED",
+    "discovered_at": "2026-09-30T15:15:34.679Z",
+    "accepted_at": null,
+    "submitted_at": null,
+    "paid_at": null,
+    "workspace": null,
+    "verification": null,
+    "submission_plan": null,
+    "submission_adapter": null,
+    "submission_requirements": null,
+    "submission_result": null,
+    "fork": null,
+    "fork_attempt": null,
+    "expected_reward": 150,
+    "expected_currency": "USD",
+    "expected_payer": null,
+    "payment_reference": null,
+    "observed_payment": null,
+    "payment_observed_at": null,
+    "reconciliation_status": "UNRECONCILED",
+    "history": [
+      {
+        "at": "2026-09-30T15:15:34.679Z",
+        "from": null,
+        "to": "DISCOVERED",
+        "by": "sensor"
+      }
+    ],
+    "notes": []
   }
 ]
