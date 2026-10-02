@@ -1,6 +1,6 @@
 # Earning agent status
 
-_Last run: 2026-10-02T19:55:11.599Z (UTC), on GitHub Actions._
+_Last run: 2026-10-02T23:44:17.943Z (UTC), on GitHub Actions._
 
 ## 💰 Wallet (real earnings land here)
 - **Base USDC** `0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb`: **0**
@@ -19,7 +19,7 @@ _Last run: 2026-10-02T19:55:11.599Z (UTC), on GitHub Actions._
 - _no submission of our own configured — watcher inert_
 
 ## 🧾 Work order queue (advance only via `node orders.mjs` — ACCEPT/SUBMIT need human GO)
-- 17 tracked · 17 active · DISCOVERED: 17 · 🆕 **5 newly discovered**
+- 17 tracked · 17 active · DISCOVERED: 17
 
 ## 🆕 Algora bounty radar (fresh = bounty posted ≤14d ago — DETECTION ONLY, nothing below is verified)
 - [hexgrad/kokoro#290](https://github.com/hexgrad/kokoro/issues/290) — **$5** · bounty 290d old · competition **MEDIUM** (7 attempts) · maintainer **STALE** (last ext merge 2025-07-09) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
