@@ -1,6 +1,6 @@
 # Earning agent status
 
-_Last run: 2026-10-03T05:11:04.038Z (UTC), on GitHub Actions._
+_Last run: 2026-10-03T10:22:52.903Z (UTC), on GitHub Actions._
 
 ## 💰 Wallet (real earnings land here)
 - **Base USDC** `0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb`: **0**
@@ -19,7 +19,7 @@ _Last run: 2026-10-03T05:11:04.038Z (UTC), on GitHub Actions._
 - _no submission of our own configured — watcher inert_
 
 ## 🧾 Work order queue (advance only via `node orders.mjs` — ACCEPT/SUBMIT need human GO)
-- 18 tracked · 18 active · DISCOVERED: 18 · 🆕 **1 newly discovered**
+- 18 tracked · 18 active · DISCOVERED: 18
 
 ## 🆕 Algora bounty radar (fresh = bounty posted ≤14d ago — DETECTION ONLY, nothing below is verified)
 - [amithmandassociates-oss/hash-report-tool#2](https://github.com/amithmandassociates-oss/hash-report-tool/issues/2) — **$50** · bounty 273d old · competition **HIGH** (21 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
@@ -29,7 +29,7 @@ _Last run: 2026-10-03T05:11:04.038Z (UTC), on GitHub Actions._
 - [drizzle-team/drizzle-orm#1603](https://github.com/drizzle-team/drizzle-orm/issues/1603) — **$50** · bounty 984d old · competition **HIGH** (38 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [drizzle-team/drizzle-orm#1083](https://github.com/drizzle-team/drizzle-orm/issues/1083) — **$30** · bounty 1056d old · competition **MEDIUM** (10 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [drizzle-team/drizzle-orm#554](https://github.com/drizzle-team/drizzle-orm/issues/554) — **$30** · bounty 1056d old · competition **MEDIUM** (9 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [Thinkmill/keystatic#340](https://github.com/Thinkmill/keystatic/issues/340) — **$100** ⚠️ **CANCELLED** · bounty 1151d old · competition **LOW** (2 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [Thinkmill/keystatic#340](https://github.com/Thinkmill/keystatic/issues/340) — **$100** ⚠️ **CANCELLED** · bounty 1152d old · competition **LOW** (2 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 
 ## 🎯 Open agent listings (Superteam) — AGENT_ONLY first (lowest competition)
 _none open right now_
