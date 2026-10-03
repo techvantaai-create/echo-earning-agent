@@ -900,5 +900,59 @@
       }
     ],
     "notes": []
+  },
+  {
+    "work_order_id": "amithmandassociates-oss/hash-report-tool#2",
+    "source": "algora",
+    "source_url": "https://github.com/amithmandassociates-oss/hash-report-tool/issues/2",
+    "title": "Add SHA-3 (Keccak) Hashing Support",
+    "description": null,
+    "reward": 50,
+    "reward_currency": "USD",
+    "payout_method": "algora / stripe-connect (recipient ledger verifiable)",
+    "payout_evidence": "NOT_CHECKED",
+    "acceptance_criteria": null,
+    "deadline": null,
+    "source_created_at": "2026-01-02T12:15:01Z",
+    "estimated_effort": null,
+    "competition": "HIGH",
+    "ai_eligibility": "NOT_CHECKED",
+    "zero_cost_status": "NOT_CHECKED",
+    "required_accounts": [
+      "Algora account — at payout only"
+    ],
+    "required_credentials": [],
+    "risk_flags": [
+      "HIGH_COMPETITION"
+    ],
+    "current_state": "DISCOVERED",
+    "discovered_at": "2026-10-03T05:11:09.653Z",
+    "accepted_at": null,
+    "submitted_at": null,
+    "paid_at": null,
+    "workspace": null,
+    "verification": null,
+    "submission_plan": null,
+    "submission_adapter": null,
+    "submission_requirements": null,
+    "submission_result": null,
+    "fork": null,
+    "fork_attempt": null,
+    "expected_reward": 50,
+    "expected_currency": "USD",
+    "expected_payer": null,
+    "payment_reference": null,
+    "observed_payment": null,
+    "payment_observed_at": null,
+    "reconciliation_status": "UNRECONCILED",
+    "history": [
+      {
+        "at": "2026-10-03T05:11:09.653Z",
+        "from": null,
+        "to": "DISCOVERED",
+        "by": "sensor"
+      }
+    ],
+    "notes": []
   }
 ]
