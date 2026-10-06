@@ -1060,5 +1060,57 @@
       }
     ],
     "notes": []
+  },
+  {
+    "work_order_id": "antfu/raycast-multi-translate#7",
+    "source": "algora",
+    "source_url": "https://github.com/antfu/raycast-multi-translate/issues/7",
+    "title": "Add support for DeepL Api",
+    "description": null,
+    "reward": 25,
+    "reward_currency": "USD",
+    "payout_method": "algora / stripe-connect (recipient ledger verifiable)",
+    "payout_evidence": "NOT_CHECKED",
+    "acceptance_criteria": null,
+    "deadline": null,
+    "source_created_at": "2023-06-11T07:39:57Z",
+    "estimated_effort": null,
+    "competition": "MEDIUM",
+    "ai_eligibility": "NOT_CHECKED",
+    "zero_cost_status": "NOT_CHECKED",
+    "required_accounts": [
+      "Algora account — at payout only"
+    ],
+    "required_credentials": [],
+    "risk_flags": [],
+    "current_state": "DISCOVERED",
+    "discovered_at": "2026-10-06T00:45:56.972Z",
+    "accepted_at": null,
+    "submitted_at": null,
+    "paid_at": null,
+    "workspace": null,
+    "verification": null,
+    "submission_plan": null,
+    "submission_adapter": null,
+    "submission_requirements": null,
+    "submission_result": null,
+    "fork": null,
+    "fork_attempt": null,
+    "expected_reward": 25,
+    "expected_currency": "USD",
+    "expected_payer": null,
+    "payment_reference": null,
+    "observed_payment": null,
+    "payment_observed_at": null,
+    "reconciliation_status": "UNRECONCILED",
+    "history": [
+      {
+        "at": "2026-10-06T00:45:56.972Z",
+        "from": null,
+        "to": "DISCOVERED",
+        "by": "sensor"
+      }
+    ],
+    "notes": []
   }
 ]
