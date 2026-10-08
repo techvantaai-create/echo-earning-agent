@@ -1,6 +1,6 @@
 # Earning agent status
 
-_Last run: 2026-10-07T23:46:51.683Z (UTC), on GitHub Actions._
+_Last run: 2026-10-08T05:54:38.149Z (UTC), on GitHub Actions._
 
 ## 💰 Wallet (real earnings land here)
 - **Base USDC** `0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb`: **0**
@@ -24,9 +24,9 @@ _Last run: 2026-10-07T23:46:51.683Z (UTC), on GitHub Actions._
 ## 🆕 Algora bounty radar (fresh = bounty posted ≤14d ago — DETECTION ONLY, nothing below is verified)
 - [hexgrad/kokoro#290](https://github.com/hexgrad/kokoro/issues/290) — **$5** · bounty 295d old · competition **MEDIUM** (6 attempts) · maintainer **STALE** (last ext merge 2025-07-09) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [microg/GmsCore#2843](https://github.com/microg/GmsCore/issues/2843) — **$1340** · bounty 329d old · competition **LOW** (5 attempts) · maintainer **ACTIVE** (last ext merge 2026-09-24) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [Feel-ix-343/markdown-oxide#269](https://github.com/Feel-ix-343/markdown-oxide/issues/269) — **$5** · bounty 421d old · competition **MEDIUM** (17 attempts) · maintainer **STALE** (last ext merge 2026-03-08) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [Feel-ix-343/markdown-oxide#269](https://github.com/Feel-ix-343/markdown-oxide/issues/269) — **$5** · bounty 422d old · competition **MEDIUM** (17 attempts) · maintainer **STALE** (last ext merge 2026-03-08) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [SCIBASE-AI/SCIBASE.AI#18](https://github.com/SCIBASE-AI/SCIBASE.AI/issues/18) — **$1000** · bounty 562d old · competition **HIGH** (80 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [seveibar/pgstrap#2](https://github.com/seveibar/pgstrap/issues/2) — **$30** · bounty 632d old · competition **HIGH** (31 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [seveibar/pgstrap#2](https://github.com/seveibar/pgstrap/issues/2) — **$30** · bounty 633d old · competition **HIGH** (31 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [drizzle-team/drizzle-orm#554](https://github.com/drizzle-team/drizzle-orm/issues/554) — **$30** · bounty 1061d old · competition **MEDIUM** (9 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [drizzle-team/drizzle-orm#1083](https://github.com/drizzle-team/drizzle-orm/issues/1083) — **$30** · bounty 1061d old · competition **MEDIUM** (10 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [antfu/raycast-multi-translate#7](https://github.com/antfu/raycast-multi-translate/issues/7) — **$25** · bounty 1214d old · competition **MEDIUM** (9 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
