@@ -1,6 +1,6 @@
 # Earning agent status
 
-_Last run: 2026-10-14T10:34:13.807Z (UTC), on GitHub Actions._
+_Last run: 2026-10-14T15:26:54.863Z (UTC), on GitHub Actions._
 
 ## 💰 Wallet (real earnings land here)
 - **Base USDC** `0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb`: **0**
@@ -22,8 +22,8 @@ _Last run: 2026-10-14T10:34:13.807Z (UTC), on GitHub Actions._
 - 21 tracked · 21 active · DISCOVERED: 21
 
 ## 🆕 Algora bounty radar (fresh = bounty posted ≤14d ago — DETECTION ONLY, nothing below is verified)
-- [microg/GmsCore#2843](https://github.com/microg/GmsCore/issues/2843) — **$1340** · bounty 335d old · competition **LOW** (5 attempts) · maintainer **ACTIVE** (last ext merge 2026-09-24) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [Feel-ix-343/markdown-oxide#269](https://github.com/Feel-ix-343/markdown-oxide/issues/269) — **$5** · bounty 428d old · competition **MEDIUM** (17 attempts) · maintainer **STALE** (last ext merge 2026-03-08) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [amithmandassociates-oss/hash-report-tool#2](https://github.com/amithmandassociates-oss/hash-report-tool/issues/2) — **$50** · bounty 285d old · competition **HIGH** (22 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [microg/GmsCore#2843](https://github.com/microg/GmsCore/issues/2843) — **$1340** · bounty 336d old · competition **LOW** (5 attempts) · maintainer **ACTIVE** (last ext merge 2026-09-24) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [SCIBASE-AI/SCIBASE.AI#18](https://github.com/SCIBASE-AI/SCIBASE.AI/issues/18) — **$1000** · bounty 568d old · competition **HIGH** (80 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [rc0/mairix#29](https://github.com/rc0/mairix/issues/29) — **$150** · bounty 595d old · competition **LOW** (4 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [seveibar/pgstrap#2](https://github.com/seveibar/pgstrap/issues/2) — **$30** · bounty 639d old · competition **HIGH** (34 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
