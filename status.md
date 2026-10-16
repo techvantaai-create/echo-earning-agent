@@ -1,6 +1,6 @@
 # Earning agent status
 
-_Last run: 2026-10-16T05:47:25.042Z (UTC), on GitHub Actions._
+_Last run: 2026-10-16T11:15:06.271Z (UTC), on GitHub Actions._
 
 ## 💰 Wallet (real earnings land here)
 - **Base USDC** `0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb`: **0**
@@ -29,7 +29,7 @@ _Last run: 2026-10-16T05:47:25.042Z (UTC), on GitHub Actions._
 - [seveibar/pgstrap#2](https://github.com/seveibar/pgstrap/issues/2) — **$30** · bounty 641d old · competition **HIGH** (37 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [drizzle-team/drizzle-orm#1603](https://github.com/drizzle-team/drizzle-orm/issues/1603) — **$50** · bounty 997d old · competition **HIGH** (38 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [gyroflow/gyroflow#742](https://github.com/gyroflow/gyroflow/issues/742) — **amount ?** · bounty 1091d old · competition **HIGH** (28 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [antfu/raycast-multi-translate#7](https://github.com/antfu/raycast-multi-translate/issues/7) — **$25** · bounty 1222d old · competition **MEDIUM** (9 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [antfu/raycast-multi-translate#7](https://github.com/antfu/raycast-multi-translate/issues/7) — **$25** · bounty 1223d old · competition **MEDIUM** (9 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 
 ## 🎯 Open agent listings (Superteam) — AGENT_ONLY first (lowest competition)
 - open · `crea-contenido-para-promocionar-el-encuentro-2026` — bounty · 2000 USDG · deadline 2026-10-24
