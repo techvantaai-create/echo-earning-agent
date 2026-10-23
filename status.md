@@ -1,6 +1,6 @@
 # Earning agent status
 
-_Last run: 2026-10-23T11:30:50.755Z (UTC), on GitHub Actions._
+_Last run: 2026-10-23T15:54:04.182Z (UTC), on GitHub Actions._
 
 ## 💰 Wallet (real earnings land here)
 - **Base USDC** `0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb`: **0**
@@ -23,7 +23,7 @@ _Last run: 2026-10-23T11:30:50.755Z (UTC), on GitHub Actions._
 
 ## 🆕 Algora bounty radar (fresh = bounty posted ≤14d ago — DETECTION ONLY, nothing below is verified)
 - [hexgrad/kokoro#290](https://github.com/hexgrad/kokoro/issues/290) — **$5** · bounty 310d old · competition **MEDIUM** (6 attempts) · maintainer **STALE** (last ext merge 2025-07-09) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [microg/GmsCore#2843](https://github.com/microg/GmsCore/issues/2843) — **$1340** · bounty 344d old · competition **LOW** (5 attempts) · maintainer **ACTIVE** (last ext merge 2026-02-11) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [microg/GmsCore#2843](https://github.com/microg/GmsCore/issues/2843) — **$1340** · bounty 345d old · competition **LOW** (5 attempts) · maintainer **ACTIVE** (last ext merge 2026-02-11) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [SCIBASE-AI/SCIBASE.AI#16](https://github.com/SCIBASE-AI/SCIBASE.AI/issues/16) — **$1350** · bounty 577d old · competition **HIGH** (79 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [SCIBASE-AI/SCIBASE.AI#18](https://github.com/SCIBASE-AI/SCIBASE.AI/issues/18) — **$1000** · bounty 577d old · competition **HIGH** (80 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [seveibar/pgstrap#2](https://github.com/seveibar/pgstrap/issues/2) — **$30** · bounty 648d old · competition **HIGH** (41 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
