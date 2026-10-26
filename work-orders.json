@@ -1166,5 +1166,167 @@
       }
     ],
     "notes": []
+  },
+  {
+    "work_order_id": "SCIBASE-AI/SCIBASE.AI#17",
+    "source": "algora",
+    "source_url": "https://github.com/SCIBASE-AI/SCIBASE.AI/issues/17",
+    "title": "Scientific Knowledge Graph Integration",
+    "description": null,
+    "reward": 475,
+    "reward_currency": "USD",
+    "payout_method": "algora / stripe-connect (recipient ledger verifiable)",
+    "payout_evidence": "NOT_CHECKED",
+    "acceptance_criteria": null,
+    "deadline": null,
+    "source_created_at": "2025-03-24T22:50:53Z",
+    "estimated_effort": null,
+    "competition": "HIGH",
+    "ai_eligibility": "NOT_CHECKED",
+    "zero_cost_status": "NOT_CHECKED",
+    "required_accounts": [
+      "Algora account — at payout only"
+    ],
+    "required_credentials": [],
+    "risk_flags": [
+      "HIGH_COMPETITION"
+    ],
+    "current_state": "DISCOVERED",
+    "discovered_at": "2026-10-26T06:55:42.850Z",
+    "accepted_at": null,
+    "submitted_at": null,
+    "paid_at": null,
+    "workspace": null,
+    "verification": null,
+    "submission_plan": null,
+    "submission_adapter": null,
+    "submission_requirements": null,
+    "submission_result": null,
+    "fork": null,
+    "fork_attempt": null,
+    "expected_reward": 475,
+    "expected_currency": "USD",
+    "expected_payer": null,
+    "payment_reference": null,
+    "observed_payment": null,
+    "payment_observed_at": null,
+    "reconciliation_status": "UNRECONCILED",
+    "history": [
+      {
+        "at": "2026-10-26T06:55:42.850Z",
+        "from": null,
+        "to": "DISCOVERED",
+        "by": "sensor"
+      }
+    ],
+    "notes": []
+  },
+  {
+    "work_order_id": "SCIBASE-AI/SCIBASE.AI#19",
+    "source": "algora",
+    "source_url": "https://github.com/SCIBASE-AI/SCIBASE.AI/issues/19",
+    "title": "Enterprise Tooling",
+    "description": null,
+    "reward": 175,
+    "reward_currency": "USD",
+    "payout_method": "algora / stripe-connect (recipient ledger verifiable)",
+    "payout_evidence": "NOT_CHECKED",
+    "acceptance_criteria": null,
+    "deadline": null,
+    "source_created_at": "2025-03-24T22:57:04Z",
+    "estimated_effort": null,
+    "competition": "HIGH",
+    "ai_eligibility": "NOT_CHECKED",
+    "zero_cost_status": "NOT_CHECKED",
+    "required_accounts": [
+      "Algora account — at payout only"
+    ],
+    "required_credentials": [],
+    "risk_flags": [
+      "HIGH_COMPETITION"
+    ],
+    "current_state": "DISCOVERED",
+    "discovered_at": "2026-10-26T06:55:42.850Z",
+    "accepted_at": null,
+    "submitted_at": null,
+    "paid_at": null,
+    "workspace": null,
+    "verification": null,
+    "submission_plan": null,
+    "submission_adapter": null,
+    "submission_requirements": null,
+    "submission_result": null,
+    "fork": null,
+    "fork_attempt": null,
+    "expected_reward": 175,
+    "expected_currency": "USD",
+    "expected_payer": null,
+    "payment_reference": null,
+    "observed_payment": null,
+    "payment_observed_at": null,
+    "reconciliation_status": "UNRECONCILED",
+    "history": [
+      {
+        "at": "2026-10-26T06:55:42.850Z",
+        "from": null,
+        "to": "DISCOVERED",
+        "by": "sensor"
+      }
+    ],
+    "notes": []
+  },
+  {
+    "work_order_id": "SCIBASE-AI/SCIBASE.AI#20",
+    "source": "algora",
+    "source_url": "https://github.com/SCIBASE-AI/SCIBASE.AI/issues/20",
+    "title": "Revenue Infrastructure",
+    "description": null,
+    "reward": 500,
+    "reward_currency": "USD",
+    "payout_method": "algora / stripe-connect (recipient ledger verifiable)",
+    "payout_evidence": "NOT_CHECKED",
+    "acceptance_criteria": null,
+    "deadline": null,
+    "source_created_at": "2025-03-24T23:00:09Z",
+    "estimated_effort": null,
+    "competition": "HIGH",
+    "ai_eligibility": "NOT_CHECKED",
+    "zero_cost_status": "NOT_CHECKED",
+    "required_accounts": [
+      "Algora account — at payout only"
+    ],
+    "required_credentials": [],
+    "risk_flags": [
+      "HIGH_COMPETITION"
+    ],
+    "current_state": "DISCOVERED",
+    "discovered_at": "2026-10-26T06:55:42.850Z",
+    "accepted_at": null,
+    "submitted_at": null,
+    "paid_at": null,
+    "workspace": null,
+    "verification": null,
+    "submission_plan": null,
+    "submission_adapter": null,
+    "submission_requirements": null,
+    "submission_result": null,
+    "fork": null,
+    "fork_attempt": null,
+    "expected_reward": 500,
+    "expected_currency": "USD",
+    "expected_payer": null,
+    "payment_reference": null,
+    "observed_payment": null,
+    "payment_observed_at": null,
+    "reconciliation_status": "UNRECONCILED",
+    "history": [
+      {
+        "at": "2026-10-26T06:55:42.850Z",
+        "from": null,
+        "to": "DISCOVERED",
+        "by": "sensor"
+      }
+    ],
+    "notes": []
   }
 ]
