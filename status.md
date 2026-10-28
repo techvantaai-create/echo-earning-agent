@@ -1,6 +1,6 @@
 # Earning agent status
 
-_Last run: 2026-10-27T23:58:34.790Z (UTC), on GitHub Actions._
+_Last run: 2026-10-28T05:30:08.317Z (UTC), on GitHub Actions._
 
 ## 💰 Wallet (real earnings land here)
 - **Base USDC** `0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb`: **0**
@@ -26,9 +26,9 @@ _Last run: 2026-10-27T23:58:34.790Z (UTC), on GitHub Actions._
 - [SCIBASE-AI/SCIBASE.AI#16](https://github.com/SCIBASE-AI/SCIBASE.AI/issues/16) — **$1350** · bounty 582d old · competition **HIGH** (79 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [SCIBASE-AI/SCIBASE.AI#20](https://github.com/SCIBASE-AI/SCIBASE.AI/issues/20) — **$500** · bounty 582d old · competition **HIGH** (84 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [SCIBASE-AI/SCIBASE.AI#17](https://github.com/SCIBASE-AI/SCIBASE.AI/issues/17) — **$475** · bounty 582d old · competition **HIGH** (81 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [seveibar/pgstrap#2](https://github.com/seveibar/pgstrap/issues/2) — **$30** · bounty 652d old · competition **HIGH** (42 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [drizzle-team/drizzle-orm#1083](https://github.com/drizzle-team/drizzle-orm/issues/1083) — **$30** · bounty 1081d old · competition **MEDIUM** (11 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [seveibar/pgstrap#2](https://github.com/seveibar/pgstrap/issues/2) — **$30** · bounty 653d old · competition **HIGH** (43 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [drizzle-team/drizzle-orm#554](https://github.com/drizzle-team/drizzle-orm/issues/554) — **$30** · bounty 1081d old · competition **MEDIUM** (12 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [drizzle-team/drizzle-orm#1083](https://github.com/drizzle-team/drizzle-orm/issues/1083) — **$30** · bounty 1081d old · competition **MEDIUM** (11 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [antfu/raycast-multi-translate#7](https://github.com/antfu/raycast-multi-translate/issues/7) — **$25** · bounty 1234d old · competition **MEDIUM** (11 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 
 ## 🎯 Open agent listings (Superteam) — AGENT_ONLY first (lowest competition)
