@@ -1,6 +1,6 @@
 # Earning agent status
 
-_Last run: 2026-11-02T15:39:24.354Z (UTC), on GitHub Actions._
+_Last run: 2026-11-02T23:12:29.931Z (UTC), on GitHub Actions._
 
 ## 💰 Wallet (real earnings land here)
 - **Base USDC** `0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb`: **0**
@@ -22,13 +22,13 @@ _Last run: 2026-11-02T15:39:24.354Z (UTC), on GitHub Actions._
 - 25 tracked · 25 active · DISCOVERED: 25
 
 ## 🆕 Algora bounty radar (fresh = bounty posted ≤14d ago — DETECTION ONLY, nothing below is verified)
+- [hexgrad/kokoro#290](https://github.com/hexgrad/kokoro/issues/290) — **$5** · bounty 321d old · competition **MEDIUM** (6 attempts) · maintainer **STALE** (last ext merge 2025-07-09) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [microg/GmsCore#2843](https://github.com/microg/GmsCore/issues/2843) — **$1340** · bounty 355d old · competition **LOW** (5 attempts) · maintainer **STALE** (last ext merge 2026-02-11) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [Feel-ix-343/markdown-oxide#263](https://github.com/Feel-ix-343/markdown-oxide/issues/263) — **$5** · bounty 447d old · competition **MEDIUM** (10 attempts) · maintainer **STALE** (last ext merge 2026-03-08) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [Feel-ix-343/markdown-oxide#274](https://github.com/Feel-ix-343/markdown-oxide/issues/274) — **$5** · bounty 447d old · competition **MEDIUM** (12 attempts) · maintainer **STALE** (last ext merge 2026-03-08) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [drizzle-team/drizzle-orm#376](https://github.com/drizzle-team/drizzle-orm/issues/376) — **$50** · bounty 1086d old · competition **MEDIUM** (11 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [drizzle-team/drizzle-orm#1083](https://github.com/drizzle-team/drizzle-orm/issues/1083) — **$30** · bounty 1086d old · competition **MEDIUM** (17 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [drizzle-team/drizzle-orm#554](https://github.com/drizzle-team/drizzle-orm/issues/554) — **$30** · bounty 1086d old · competition **MEDIUM** (15 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [gyroflow/gyroflow#742](https://github.com/gyroflow/gyroflow/issues/742) — **amount ?** · bounty 1108d old · competition **HIGH** (33 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [drizzle-team/drizzle-orm#376](https://github.com/drizzle-team/drizzle-orm/issues/376) — **$50** · bounty 1087d old · competition **MEDIUM** (11 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [drizzle-team/drizzle-orm#1083](https://github.com/drizzle-team/drizzle-orm/issues/1083) — **$30** · bounty 1087d old · competition **MEDIUM** (17 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [drizzle-team/drizzle-orm#554](https://github.com/drizzle-team/drizzle-orm/issues/554) — **$30** · bounty 1087d old · competition **MEDIUM** (15 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [gyroflow/gyroflow#742](https://github.com/gyroflow/gyroflow/issues/742) — **amount ?** · bounty 1109d old · competition **HIGH** (33 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [antfu/raycast-multi-translate#7](https://github.com/antfu/raycast-multi-translate/issues/7) — **$25** · bounty 1240d old · competition **MEDIUM** (14 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 
 ## 🎯 Open agent listings (Superteam) — AGENT_ONLY first (lowest competition)
