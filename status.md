@@ -1,6 +1,6 @@
 # Earning agent status
 
-_Last run: 2026-11-06T23:02:47.444Z (UTC), on GitHub Actions._
+_Last run: 2026-11-07T02:44:22.536Z (UTC), on GitHub Actions._
 
 ## 💰 Wallet (real earnings land here)
 - **Base USDC** `0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb`: **0**
@@ -19,17 +19,17 @@ _Last run: 2026-11-06T23:02:47.444Z (UTC), on GitHub Actions._
 - _no submission of our own configured — watcher inert_
 
 ## 🧾 Work order queue (advance only via `node orders.mjs` — ACCEPT/SUBMIT need human GO)
-- 25 tracked · 25 active · DISCOVERED: 25
+- 27 tracked · 27 active · DISCOVERED: 27 · 🆕 **2 newly discovered**
 
 ## 🆕 Algora bounty radar (fresh = bounty posted ≤14d ago — DETECTION ONLY, nothing below is verified)
-- [hexgrad/kokoro#290](https://github.com/hexgrad/kokoro/issues/290) — **$5** · bounty 325d old · competition **MEDIUM** (6 attempts) · maintainer **STALE** (last ext merge 2025-07-09) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [microg/GmsCore#2843](https://github.com/microg/GmsCore/issues/2843) — **$1340** · bounty 359d old · competition **LOW** (5 attempts) · maintainer **ACTIVE** (last ext merge 2026-11-03) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [SCIBASE-AI/SCIBASE.AI#13](https://github.com/SCIBASE-AI/SCIBASE.AI/issues/13) — **$400** · bounty 591d old · competition **HIGH** (75 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [SCIBASE-AI/SCIBASE.AI#20](https://github.com/SCIBASE-AI/SCIBASE.AI/issues/20) — **$500** · bounty 592d old · competition **HIGH** (84 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [SCIBASE-AI/SCIBASE.AI#19](https://github.com/SCIBASE-AI/SCIBASE.AI/issues/19) — **$175** · bounty 592d old · competition **HIGH** (86 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [SCIBASE-AI/SCIBASE.AI#18](https://github.com/SCIBASE-AI/SCIBASE.AI/issues/18) — **$1000** · bounty 592d old · competition **HIGH** (80 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [seveibar/pgstrap#2](https://github.com/seveibar/pgstrap/issues/2) — **$30** · bounty 662d old · competition **HIGH** (47 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [qwer80371832/loadertest#3](https://github.com/qwer80371832/loadertest/issues/3) — **$10** · bounty 845d old · competition **LOW** (1 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [drizzle-team/drizzle-orm#1083](https://github.com/drizzle-team/drizzle-orm/issues/1083) — **$30** · bounty 1091d old · competition **MEDIUM** (19 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [drizzle-team/drizzle-orm#376](https://github.com/drizzle-team/drizzle-orm/issues/376) — **$50** · bounty 1091d old · competition **MEDIUM** (6 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [antfu/raycast-multi-translate#7](https://github.com/antfu/raycast-multi-translate/issues/7) — **$25** · bounty 1244d old · competition **MEDIUM** (15 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [SCIBASE-AI/SCIBASE.AI#17](https://github.com/SCIBASE-AI/SCIBASE.AI/issues/17) — **$475** · bounty 592d old · competition **HIGH** (82 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [SCIBASE-AI/SCIBASE.AI#16](https://github.com/SCIBASE-AI/SCIBASE.AI/issues/16) — **$1350** · bounty 592d old · competition **HIGH** (79 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [SCIBASE-AI/SCIBASE.AI#15](https://github.com/SCIBASE-AI/SCIBASE.AI/issues/15) — **$525** · bounty 592d old · competition **HIGH** (86 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [SCIBASE-AI/SCIBASE.AI#14](https://github.com/SCIBASE-AI/SCIBASE.AI/issues/14) — **$375** · bounty 592d old · competition **HIGH** (69 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 
 ## 🎯 Open agent listings (Superteam) — AGENT_ONLY first (lowest competition)
 _none open right now_
