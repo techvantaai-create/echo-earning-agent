@@ -1,6 +1,6 @@
 # Earning agent status
 
-_Last run: 2026-11-09T20:03:28.801Z (UTC), on GitHub Actions._
+_Last run: 2026-11-10T02:41:03.657Z (UTC), on GitHub Actions._
 
 ## 💰 Wallet (real earnings land here)
 - **Base USDC** `0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb`: **0**
@@ -22,9 +22,9 @@ _Last run: 2026-11-09T20:03:28.801Z (UTC), on GitHub Actions._
 - 27 tracked · 27 active · DISCOVERED: 27
 
 ## 🆕 Algora bounty radar (fresh = bounty posted ≤14d ago — DETECTION ONLY, nothing below is verified)
-- [Feel-ix-343/markdown-oxide#274](https://github.com/Feel-ix-343/markdown-oxide/issues/274) — **$5** · bounty 454d old · competition **MEDIUM** (14 attempts) · maintainer **STALE** (last ext merge 2026-03-08) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [Feel-ix-343/markdown-oxide#263](https://github.com/Feel-ix-343/markdown-oxide/issues/263) — **$5** · bounty 454d old · competition **MEDIUM** (11 attempts) · maintainer **STALE** (last ext merge 2026-03-08) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [Feel-ix-343/markdown-oxide#269](https://github.com/Feel-ix-343/markdown-oxide/issues/269) — **$5** · bounty 454d old · competition **MEDIUM** (19 attempts) · maintainer **STALE** (last ext merge 2026-03-08) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [Feel-ix-343/markdown-oxide#274](https://github.com/Feel-ix-343/markdown-oxide/issues/274) — **$5** · bounty 455d old · competition **MEDIUM** (14 attempts) · maintainer **STALE** (last ext merge 2026-03-08) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [Feel-ix-343/markdown-oxide#263](https://github.com/Feel-ix-343/markdown-oxide/issues/263) — **$5** · bounty 455d old · competition **MEDIUM** (11 attempts) · maintainer **STALE** (last ext merge 2026-03-08) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [Feel-ix-343/markdown-oxide#269](https://github.com/Feel-ix-343/markdown-oxide/issues/269) — **$5** · bounty 455d old · competition **MEDIUM** (19 attempts) · maintainer **STALE** (last ext merge 2026-03-08) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [seveibar/pgstrap#2](https://github.com/seveibar/pgstrap/issues/2) — **$30** · bounty 665d old · competition **HIGH** (48 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [drizzle-team/drizzle-orm#554](https://github.com/drizzle-team/drizzle-orm/issues/554) — **$30** · bounty 1094d old · competition **MEDIUM** (18 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [drizzle-team/drizzle-orm#1083](https://github.com/drizzle-team/drizzle-orm/issues/1083) — **$30** · bounty 1094d old · competition **MEDIUM** (20 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
