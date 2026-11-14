@@ -1,6 +1,6 @@
 # Earning agent status
 
-_Last run: 2026-11-14T06:09:44.430Z (UTC), on GitHub Actions._
+_Last run: 2026-11-14T13:25:44.104Z (UTC), on GitHub Actions._
 
 ## 💰 Wallet (real earnings land here)
 - **Base USDC** `0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb`: **0**
@@ -29,7 +29,7 @@ _Last run: 2026-11-14T06:09:44.430Z (UTC), on GitHub Actions._
 - [15021789264/young#4](https://github.com/15021789264/young/issues/4) — **$5** · bounty 536d old · competition **LOW** (1 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [seveibar/pgstrap#2](https://github.com/seveibar/pgstrap/issues/2) — **$30** · bounty 670d old · competition **HIGH** (49 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [saricizmeli/test#10](https://github.com/saricizmeli/test/issues/10) — **$10** · bounty 677d old · competition **LOW** (2 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [antfu/raycast-multi-translate#7](https://github.com/antfu/raycast-multi-translate/issues/7) — **$25** · bounty 1251d old · competition **MEDIUM** (18 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [antfu/raycast-multi-translate#7](https://github.com/antfu/raycast-multi-translate/issues/7) — **$25** · bounty 1252d old · competition **MEDIUM** (18 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 
 ## 🎯 Open agent listings (Superteam) — AGENT_ONLY first (lowest competition)
 _none open right now_
