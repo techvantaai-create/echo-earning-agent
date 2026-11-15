@@ -1,6 +1,6 @@
 # Earning agent status
 
-_Last run: 2026-11-15T09:52:32.250Z (UTC), on GitHub Actions._
+_Last run: 2026-11-15T17:00:44.142Z (UTC), on GitHub Actions._
 
 ## 💰 Wallet (real earnings land here)
 - **Base USDC** `0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb`: **0**
@@ -24,11 +24,11 @@ _Last run: 2026-11-15T09:52:32.250Z (UTC), on GitHub Actions._
 ## 🆕 Algora bounty radar (fresh = bounty posted ≤14d ago — DETECTION ONLY, nothing below is verified)
 - [Scottcjn/Rustchain#2239](https://github.com/Scottcjn/Rustchain/issues/2239) — **$100** · bounty 216d old · competition **LOW** (1 attempts) · maintainer **MODERATELY_ACTIVE** (last ext merge 2026-05-14) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [hexgrad/kokoro#290](https://github.com/hexgrad/kokoro/issues/290) — **$5** · bounty 333d old · competition **LOW** (5 attempts) · maintainer **STALE** (last ext merge 2025-07-09) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [Feel-ix-343/markdown-oxide#263](https://github.com/Feel-ix-343/markdown-oxide/issues/263) — **$5** · bounty 460d old · competition **MEDIUM** (10 attempts) · maintainer **STALE** (last ext merge 2026-03-08) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [15021789264/young#2](https://github.com/15021789264/young/issues/2) — **$5** · bounty 537d old · competition **LOW** (1 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [15021789264/young#4](https://github.com/15021789264/young/issues/4) — **$5** · bounty 537d old · competition **LOW** (1 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [15021789264/young#2](https://github.com/15021789264/young/issues/2) — **$5** · bounty 538d old · competition **LOW** (1 attempts) · maintainer **STALE** (last ext merge 2025-05-26) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [15021789264/young#4](https://github.com/15021789264/young/issues/4) — **$5** · bounty 538d old · competition **LOW** (1 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [seveibar/pgstrap#2](https://github.com/seveibar/pgstrap/issues/2) — **$30** · bounty 671d old · competition **HIGH** (49 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [saricizmeli/test#10](https://github.com/saricizmeli/test/issues/10) — **$10** · bounty 678d old · competition **LOW** (2 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [drizzle-team/drizzle-orm#376](https://github.com/drizzle-team/drizzle-orm/issues/376) — **$50** · bounty 1100d old · competition **MEDIUM** (7 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [antfu/raycast-multi-translate#7](https://github.com/antfu/raycast-multi-translate/issues/7) — **$25** · bounty 1253d old · competition **MEDIUM** (18 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 
 ## 🎯 Open agent listings (Superteam) — AGENT_ONLY first (lowest competition)
