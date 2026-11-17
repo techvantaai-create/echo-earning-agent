@@ -1,6 +1,6 @@
 # Earning agent status
 
-_Last run: 2026-11-17T02:26:08.099Z (UTC), on GitHub Actions._
+_Last run: 2026-11-17T11:05:07.426Z (UTC), on GitHub Actions._
 
 ## 💰 Wallet (real earnings land here)
 - **Base USDC** `0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb`: **0**
@@ -28,8 +28,8 @@ _Last run: 2026-11-17T02:26:08.099Z (UTC), on GitHub Actions._
 - [drizzle-team/drizzle-orm#376](https://github.com/drizzle-team/drizzle-orm/issues/376) — **$50** · bounty 1101d old · competition **MEDIUM** (8 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [drizzle-team/drizzle-orm#1083](https://github.com/drizzle-team/drizzle-orm/issues/1083) — **$30** · bounty 1101d old · competition **HIGH** (21 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [drizzle-team/drizzle-orm#554](https://github.com/drizzle-team/drizzle-orm/issues/554) — **$30** · bounty 1101d old · competition **MEDIUM** (19 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [Thinkmill/keystatic#340](https://github.com/Thinkmill/keystatic/issues/340) — **$100** ⚠️ **CANCELLED** · bounty 1196d old · competition **LOW** (5 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [antfu/raycast-multi-translate#7](https://github.com/antfu/raycast-multi-translate/issues/7) — **$25** · bounty 1254d old · competition **MEDIUM** (20 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [Thinkmill/keystatic#340](https://github.com/Thinkmill/keystatic/issues/340) — **$100** ⚠️ **CANCELLED** · bounty 1197d old · competition **LOW** (5 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [antfu/raycast-multi-translate#7](https://github.com/antfu/raycast-multi-translate/issues/7) — **$25** · bounty 1255d old · competition **MEDIUM** (20 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 
 ## 🎯 Open agent listings (Superteam) — AGENT_ONLY first (lowest competition)
 _none open right now_
