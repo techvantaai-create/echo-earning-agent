@@ -1,6 +1,6 @@
 # Earning agent status
 
-_Last run: 2026-11-20T07:03:19.516Z (UTC), on GitHub Actions._
+_Last run: 2026-11-20T16:03:55.613Z (UTC), on GitHub Actions._
 
 ## 💰 Wallet (real earnings land here)
 - **Base USDC** `0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb`: **0**
@@ -23,8 +23,8 @@ _Last run: 2026-11-20T07:03:19.516Z (UTC), on GitHub Actions._
 
 ## 🆕 Algora bounty radar (fresh = bounty posted ≤14d ago — DETECTION ONLY, nothing below is verified)
 - [hexgrad/kokoro#290](https://github.com/hexgrad/kokoro/issues/290) — **$5** · bounty 338d old · competition **LOW** (5 attempts) · maintainer **STALE** (last ext merge 2025-07-09) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [microg/GmsCore#2843](https://github.com/microg/GmsCore/issues/2843) — **$1340** · bounty 372d old · competition **LOW** (5 attempts) · maintainer **ACTIVE** (last ext merge 2026-11-11) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [15021789264/young#1](https://github.com/15021789264/young/issues/1) — **$1** · bounty 542d old · competition **LOW** (1 attempts) · maintainer **STALE** (last ext merge 2025-05-26) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [microg/GmsCore#2843](https://github.com/microg/GmsCore/issues/2843) — **$1340** · bounty 373d old · competition **LOW** (5 attempts) · maintainer **ACTIVE** (last ext merge 2026-11-11) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [15021789264/young#1](https://github.com/15021789264/young/issues/1) — **$1** · bounty 543d old · competition **NONE** (0 attempts) · maintainer **STALE** (last ext merge 2025-05-26) · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [SCIBASE-AI/SCIBASE.AI#18](https://github.com/SCIBASE-AI/SCIBASE.AI/issues/18) — **$1000** · bounty 605d old · competition **HIGH** (80 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [seveibar/pgstrap#2](https://github.com/seveibar/pgstrap/issues/2) — **$30** · bounty 676d old · competition **HIGH** (50 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [drizzle-team/drizzle-orm#1083](https://github.com/drizzle-team/drizzle-orm/issues/1083) — **$30** · bounty 1104d old · competition **MEDIUM** (18 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
