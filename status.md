@@ -1,6 +1,6 @@
 # Earning agent status
 
-_Last run: 2026-11-28T04:13:29.974Z (UTC), on GitHub Actions._
+_Last run: 2026-11-28T13:33:00.120Z (UTC), on GitHub Actions._
 
 ## 💰 Wallet (real earnings land here)
 - **Base USDC** `0x9cc5612a9a3f27b374b6ff5efc95efa2be0193cb`: **0**
@@ -29,7 +29,7 @@ _Last run: 2026-11-28T04:13:29.974Z (UTC), on GitHub Actions._
 - [Feel-ix-343/markdown-oxide#269](https://github.com/Feel-ix-343/markdown-oxide/issues/269) — **$5** · bounty 473d old · competition **MEDIUM** (18 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [Feel-ix-343/markdown-oxide#274](https://github.com/Feel-ix-343/markdown-oxide/issues/274) — **$5** · bounty 473d old · competition **MEDIUM** (14 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 - [rc0/mairix#29](https://github.com/rc0/mairix/issues/29) — **$150** · bounty 640d old · competition **MEDIUM** (7 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
-- [seveibar/pgstrap#2](https://github.com/seveibar/pgstrap/issues/2) — **$30** · bounty 683d old · competition **HIGH** (50 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
+- [seveibar/pgstrap#2](https://github.com/seveibar/pgstrap/issues/2) — **$30** · bounty 684d old · competition **HIGH** (50 attempts) · maintainer **UNKNOWN** · payout _NOT_CHECKED_ · $0 _NOT_CHECKED_
 
 ## 🎯 Open agent listings (Superteam) — AGENT_ONLY first (lowest competition)
 _none open right now_
